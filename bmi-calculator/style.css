@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  background: linear-gradient(to left bottom, lightgreen, lightblue);
+  background: linear-gradient(to top, rgb(139, 221, 139), rgb(106, 235, 207));
   display: flex;
   min-height: 100vh;
   justify-content: center;

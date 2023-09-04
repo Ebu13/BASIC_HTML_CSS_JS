@@ -17,6 +17,7 @@
         id="height"
         value="180"
         placeholder="Enter your height in cm"
+        oninput="calculateBMI()"
       />
       <label for="weight">Your Weight (kg):</label>
       <input
@@ -25,8 +26,9 @@
         id="weight"
         value="80"
         placeholder="Enter your weight in kg"
+        oninput="calculateBMI()"
       />
-      <button class="btn" id="btn">Compute BMI</button>
+      <button class="btn" id="btn" onclick="calculateBMI()">Compute BMI</button>
       <input disabled type="text" class="input" id="bmi-result" />
       <h4 class="info-text">
         Weight Condition: <span id="weight-condition"></span>

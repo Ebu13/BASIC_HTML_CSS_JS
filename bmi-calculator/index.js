@@ -1,4 +1,3 @@
-const btnEl = document.getElementById("btn");
 const bmiInputEl = document.getElementById("bmi-result");
 const weightConditionEl = document.getElementById("weight-condition");
 
@@ -20,5 +19,3 @@ function calculateBMI() {
     weightConditionEl.innerText = "Obesity";
   }
 }
-
-btnEl.addEventListener("click", calculateBMI);

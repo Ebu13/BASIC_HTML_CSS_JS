@@ -45,7 +45,6 @@ body {
   font-size: 18px;
 }
 
-
-.input::placeholder{
-    color: darkgray;
+.input::placeholder {
+  color: darkgray;
 }
