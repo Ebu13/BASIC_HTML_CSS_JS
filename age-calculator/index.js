@@ -4,10 +4,10 @@ const resultEl = document.getElementById("result");
 function calculateAge() {
   const birthdayValue = birthdayEl.value;
   if (birthdayValue === "") {
-    resultEl.innerText = "Please enter your birthday";
+    resultEl.innerText = "Lütfen Doğum Tarihinizi Giriniz";
   } else {
     const age = getAge(birthdayValue);
-    resultEl.innerText = `Your age is ${age} ${age > 1 ? "years" : "year"} old`;
+    resultEl.innerText = `Yaşınız ${age}`;
   }
 }
 
