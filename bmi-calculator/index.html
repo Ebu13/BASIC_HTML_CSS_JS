@@ -2,37 +2,28 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>BMI Calculator</title>
+    <title>Vücut Kitle Endeksi Hesaplama</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <div class="container">
-      <h1 class="heading">Body Mass Index (BMI) Calculator</h1>
-      <label for="height">Your Height (cm):</label>
+      <h1>Vücut Kitle Endeksi Hesaplayıcı</h1>
+      <label for="height">Boy (cm):</label>
       <input
         type="number"
-        class="input"
         id="height"
-        value="180"
-        placeholder="Enter your height in cm"
-        oninput="calculateBMI()"
+        placeholder="Boyunuzu cm Cinsinden Giriniz"
       />
-      <label for="weight">Your Weight (kg):</label>
+      <label for="weight">Kilo (kg):</label>
       <input
         type="number"
-        class="input"
         id="weight"
-        value="80"
-        placeholder="Enter your weight in kg"
-        oninput="calculateBMI()"
+        placeholder="Kilonuzu kg Cinsinden Giriniz"
       />
-      <button class="btn" id="btn" onclick="calculateBMI()">Compute BMI</button>
-      <input disabled type="text" class="input" id="bmi-result" />
-      <h4 class="info-text">
-        Weight Condition: <span id="weight-condition"></span>
-      </h4>
+      <button class="btn" id="btn" onclick="calculateBMI()">Hesapla</button>
+      <input disabled type="text" id="bmi-result" placeholder="Sonuç" />
+      <h4 id="weight-condition">Kilo Durumu: <span id="condition"></span></h4>
     </div>
     <script src="index.js"></script>
   </body>

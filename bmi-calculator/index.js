@@ -1,21 +1,17 @@
-const bmiInputEl = document.getElementById("bmi-result");
-const weightConditionEl = document.getElementById("weight-condition");
-
 function calculateBMI() {
-  const heightValue = document.getElementById("height").value / 100;
-  const weightValue = document.getElementById("weight").value;
+  var height = document.getElementById("height").value / 100;
+  var weight = document.getElementById("weight").value;
+  var bmi = weight / (height * height);
+  document.getElementById("bmi-result").value = bmi.toFixed(2);
 
-  const bmiValue = weightValue / (heightValue * heightValue);
-
-  bmiInputEl.value = bmiValue.toFixed(2);
-
-  if (bmiValue < 18.5) {
-    weightConditionEl.innerText = "Underweight";
-  } else if (bmiValue >= 18.5 && bmiValue <= 24.9) {
-    weightConditionEl.innerText = "Normal weight";
-  } else if (bmiValue >= 25 && bmiValue <= 29.9) {
-    weightConditionEl.innerText = "Overweight";
-  } else if (bmiValue >= 30) {
-    weightConditionEl.innerText = "Obesity";
+  var conditionEl = document.getElementById("condition");
+  if (bmi < 18.5) {
+    conditionEl.textContent = "Zayıf";
+  } else if (bmi >= 18.5 && bmi < 25) {
+    conditionEl.textContent = "Normal";
+  } else if (bmi >= 25 && bmi < 30) {
+    conditionEl.textContent = "Kilolu";
+  } else if (bmi >= 30){
+    conditionEl.textContent = "Obez";
   }
 }
